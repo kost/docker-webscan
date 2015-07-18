@@ -24,7 +24,7 @@ docker run --rm -v /path/to/host/work:/work:rw k0st/alpine-skipfish -S /opt/skip
 
 Run scan on http://192.168.1.1 with minimal dict:
 ```
-docker run -it --rm -v /data/work/work:/work:rw k0st/alpine-skipfish -o /work/192 -S /opt/skipfish/dictionaries/minimal.wl http://192.168.1.1
+docker run -it --rm -v /path/to/host/work:/work:rw k0st/alpine-skipfish -o /work/192 -S /opt/skipfish/dictionaries/minimal.wl http://192.168.1.1
 ```
 
 
