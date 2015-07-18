@@ -35,9 +35,18 @@ Password: `regular_user`
 Run web UI:
 
 ```
-docker run k0st/debian-arachni
+docker run -p 9292:9292 k0st/debian-arachni
 ```
 
+Run RPC service:
+```
+docker run --entrypoint=arachni_rpcd k0st/debian-arachni
+```
+
+Run console:
+```
+docker run --entrypoint=arachni_console k0st/debian-arachni
+```
 
 
 
