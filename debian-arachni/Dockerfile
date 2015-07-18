@@ -12,6 +12,7 @@ tar xvzf arachni-$VERSION_ARACHNI-linux-x86_64.tar.gz && \
 rm -f arachni-$VERSION_ARACHNI-linux-x86_64.tar.gz && \
 ln -sf /opt/arachni-$VERSION_ARACHNI /opt/arachni && \
 useradd -m -s /bin/sh user && \
+mkdir /work && \
 chown -R user /work /opt/arachni-$VERSION_ARACHNI && \
 echo "Success"
 
