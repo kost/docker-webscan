@@ -1,13 +1,14 @@
 FROM debian:jessie
 MAINTAINER kost - https://github.com/kost
 
-ENV VERSION_ARACHNI 1.2-0.5.7.1
+ENV VERSION_FRAMEWORK 1.2.1
+ENV VERSION_ARACHNI $VERSION_FRAMEWORK-0.5.7.1
 
 RUN apt-get -qq update && \
 apt-get install -yq  wget ruby bash && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 cd /opt && \
-wget https://github.com/Arachni/arachni/releases/download/v1.2/arachni-$VERSION_ARACHNI-linux-x86_64.tar.gz && \
+wget https://github.com/Arachni/arachni/releases/download/v$VERSION_FRAMEWORK/arachni-$VERSION_ARACHNI-linux-x86_64.tar.gz && \
 tar xvzf arachni-$VERSION_ARACHNI-linux-x86_64.tar.gz && \
 rm -f arachni-$VERSION_ARACHNI-linux-x86_64.tar.gz && \
 ln -sf /opt/arachni-$VERSION_ARACHNI /opt/arachni && \
