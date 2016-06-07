@@ -1,8 +1,8 @@
 FROM debian:jessie
 MAINTAINER kost - https://github.com/kost
 
-ENV VERSION_FRAMEWORK 1.2.1
-ENV VERSION_ARACHNI $VERSION_FRAMEWORK-0.5.7.1
+ENV VERSION_FRAMEWORK 1.4
+ENV VERSION_ARACHNI $VERSION_FRAMEWORK-0.5.10
 
 RUN apt-get -qq update && \
 apt-get install -yq  wget ruby bash && \
